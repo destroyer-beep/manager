@@ -1,0 +1,5 @@
+{
+  "watch": ["src"],
+  "ignore": ["dist", "*.js.map", "node_modules"],
+  "ext": "ts"
+}
