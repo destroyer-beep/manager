@@ -6,7 +6,7 @@ export class Database {
             image: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png',
             id: Date.now().toString(),
             title: 'test',
-            category: '1',
+            category: 'Что то там',
             price: 1200,
             rating: {
                 rate: 1

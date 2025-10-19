@@ -1,0 +1,42 @@
+.updateProduct {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .name {
+      font-size: 12px;
+      color: #6b6b6b;
+    }
+
+    .value {
+      font-size: 16px;
+      font-weight: 400;
+      padding: 4px;
+      border-radius: 4px;
+      background: #f6f6f6;
+      border: 1px solid #d5d5d5;
+    }
+  }
+
+  .image {
+    height: 150px;
+    object-fit: contain;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background-color: #f3f3f3;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+  }
+}

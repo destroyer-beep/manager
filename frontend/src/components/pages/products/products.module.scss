@@ -1,0 +1,12 @@
+.product {
+  height: calc(100% - 45px);
+  max-width: 1300px;
+  margin: 0 auto;
+
+  .row {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

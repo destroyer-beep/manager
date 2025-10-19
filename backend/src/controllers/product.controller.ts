@@ -1,5 +1,6 @@
 import {Request, Response} from 'express';
 import {productService} from "../services/product.service";
+import {pick} from "../utils/helpers/pick.helpers";
 
 class ProductController {
     public getList(req: Request, res: Response) {
@@ -35,7 +36,6 @@ class ProductController {
     public addProduct(req: Request, res: Response) {
         try {
             const {product} = req.body;
-
             const validationProduct = pick(product, ['title', 'image', 'price', 'category', 'rating']);
 
             const newProduct = productService.addProduct(validationProduct);
@@ -73,9 +73,11 @@ class ProductController {
                 return;
             }
 
-            const validationProduct = pick(product, ['title', 'image', 'price', 'category', 'rating']);
+            const {image, rating, category} = oldProduct;
 
-            const newProduct = productService.updateProductById(productId, validationProduct);
+            const validationProduct = pick(product, ['title', 'price']);
+
+            const newProduct = productService.updateProductById(productId, {...validationProduct, image, category, rating});
 
             res.status(200).send(newProduct);
 
